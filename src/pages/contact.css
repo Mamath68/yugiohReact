@@ -1,0 +1,44 @@
+/******************************************
+# Contact
+******************************************/
+.contact .info-box {
+    color: #444444;
+    padding: 20px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    text-align: center;
+}
+
+.contact .info-box i.bx {
+    font-size: 1.5rem;
+    color: var(--primary);
+    border-radius: 50%;
+    padding: 14px;
+    float: left;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.contact .info-box h3 {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 700;
+    margin: 10px 0 8px 68px;
+}
+
+.contact .info-box p {
+    padding: 0;
+    color: #ffffff;
+    line-height: 24px;
+    font-size: 14px;
+    margin: 0 0 0 68px;
+}
+
+.contact .info-box .social-links {
+    margin: 5px;
+}
+
+.contact .info-box .social-links a {
+    margin: 0 -1px 0 28px;
+    font-size: 1.2rem;
+}

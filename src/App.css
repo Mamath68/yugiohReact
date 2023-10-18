@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2? family=Berkshire+Swash&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/*****************************************************************
+# General
+*****************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  --primary: #00fffb;
+  --second: #009e9c;
+  --bgColor: #192938;
 }
 
-.App-header {
-  background-color: #282c34;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #040404;
+  color: #fff;
+  position: relative;
+  background: transparent;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+body::before {
+  content: '';
+  position: fixed;
+  background: #040404 url('./images/bg-img.jpeg') top center no-repeat;
+  background-size: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: -1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width : 1024px) {
+  body::before {
+    background-attachment: fixed;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*********************************************************
+# Header
+*********************************************************/
+section {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 50vh;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: ease-in-out 1s;
+  z-index: 2;
+}
+
+section.section-show {
+  top: 100px;
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+  padding-bottom: 50px;
+  overflow-y: visible;
+}
+
+section .container {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  padding: 30px;
+}
+
+@media(max-width: 768px) {
+  section {
+    top: 120px;
+  }
+
+  section.section-show {
+    top: 80px;
   }
 }

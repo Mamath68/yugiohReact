@@ -1,0 +1,23 @@
+/************************************
+# Monstre
+************************************/
+#warrior {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+}
+
+#wizard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+}
+
+.flex {
+    display: flex !important;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
